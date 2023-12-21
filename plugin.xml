@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-adjoe" version="2.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-adjoe</name>
+    <description>Add support for adjoe ads in a Cordova app</description>
+    <js-module src="www/adjoe.js" name="Adjoe">
+        <clobbers target="AdjoePlugin" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova-android" version=">=4.0.0" />
+        <engine name="cordova-plugman" version=">=4.2.0" />
+    </engines>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AdjoePlugin">
+                <param name="android-package" value="io.adjoe.sdk.cordova.AdjoePlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="io.adjoe.sdk.AdjoeActivity" android:configChanges="orientation|screenSize" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        </config-file>
+
+        <source-file src="src/android/AdjoePlugin.java"
+            target-dir="src/io/adjoe/sdk/cordova" />
+        <framework src="src/android/adjoe.gradle" custom="true" type="gradleReference" />
+    </platform>
+</plugin>

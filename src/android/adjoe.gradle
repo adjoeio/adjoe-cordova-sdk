@@ -1,0 +1,16 @@
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+    jcenter()
+    maven {
+            url  "https://releases.adjoe.io/maven"
+    }
+}
+
+cdvPluginPostBuildExtras.add({
+
+	dependencies {
+   		implementation 'io.adjoe:adjoe-sdk-android:2.1.1'
+	}
+});
