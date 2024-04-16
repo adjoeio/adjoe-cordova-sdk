@@ -4,13 +4,13 @@ repositories {
     }
     jcenter()
     maven {
-            url  "https://releases.adjoe.io/maven"
+            url  "https://pre-releases.adjoe.io/maven-pre-release"
     }
 }
 
 cdvPluginPostBuildExtras.add({
 
 	dependencies {
-   		implementation 'io.adjoe:adjoe-sdk-android:2.1.1'
+   		implementation 'io.adjoe:adjoe-sdk-android:2.2.1.1'
 	}
 });
