@@ -11,6 +11,6 @@ repositories {
 cdvPluginPostBuildExtras.add({
 
 	dependencies {
-   		implementation 'io.adjoe:adjoe-sdk-android:2.2.1'
+   		implementation 'io.adjoe:adjoe-sdk-android:2.2.2'
 	}
 });
