@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-adjoe</name>
     <description>Add support for adjoe ads in a Cordova app</description>
-    <js-module src="www/adjoe.js" name="Adjoe">
-        <clobbers target="AdjoePlugin" />
+    <js-module src="www/playtime.js" name="Playtime">
+        <clobbers target="PlaytimePlugin" />
     </js-module>
 
     <engines>
@@ -15,8 +15,8 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AdjoePlugin">
-                <param name="android-package" value="io.adjoe.sdk.cordova.AdjoePlugin" />
+            <feature name="PlaytimePlugin">
+                <param name="android-package" value="io.adjoe.sdk.cordova.PlaytimePlugin" />
             </feature>
         </config-file>
 
@@ -26,10 +26,10 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="io.adjoe.sdk.AdjoeActivity" android:configChanges="orientation|screenSize" android:theme="@style/Theme.AppCompat.NoActionBar" />
+            <activity android:name="io.adjoe.sdk.PlaytimeActivity" android:configChanges="orientation|screenSize" android:theme="@style/Theme.AppCompat.NoActionBar" />
         </config-file>
 
-        <source-file src="src/android/AdjoePlugin.java"
+        <source-file src="src/android/PlaytimePlugin.java"
             target-dir="src/io/adjoe/sdk/cordova" />
         <framework src="src/android/adjoe.gradle" custom="true" type="gradleReference" />
     </platform>

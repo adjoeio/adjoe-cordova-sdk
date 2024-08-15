@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-adjoe",
-  "version": "2.2.2",
-  "description": "The cordova plugin for adjoe",
+  "version": "3.0.0-beta.1",
+  "description": "The cordova plugin for Playtime SDK",
   "main": "index.js"
 }
