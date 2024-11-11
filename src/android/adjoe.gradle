@@ -14,6 +14,6 @@ repositories {
 cdvPluginPostBuildExtras.add({
 
 	dependencies {
-   		implementation 'io.adjoe:adjoe-sdk-android:3.0.0-beta.1'
+   		implementation 'io.adjoe:adjoe-sdk-android:3.0.0'
 	}
 });
