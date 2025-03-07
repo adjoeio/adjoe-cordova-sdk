@@ -187,11 +187,11 @@ public class PlaytimePlugin extends CordovaPlugin {
                     public void onUserReceivesReward(PlaytimeRewardResponse playtimeRewardResponse) {
                         // successfully requested the rewards
                         // get the total amount of coins which the user has collected
-                        int reward = playtimeRewardResponse.getReward();
+                        int reward = playtimeRewardResponse.reward;
                         // get the amount of coins which are available for payout
-                        int availableForPayout = playtimeRewardResponse.getAvailablePayoutCoins();
+                        int availableForPayout = playtimeRewardResponse.availablePayoutCoins;
                         // get the amount of coins which the user has already spent
-                        int alreadySpentCoins = playtimeRewardResponse.getAlreadySpentCoins();
+                        int alreadySpentCoins = playtimeRewardResponse.alreadySpentCoins;
 
 
                         JSONObject json = new JSONObject();
@@ -211,9 +211,9 @@ public class PlaytimePlugin extends CordovaPlugin {
                         // you can try to get additional information about the error for debugging
                         Log.e(LOGTAG, "Playtime  onUserReceivesRewardError" + playtimeRewardResponseError.toString());
 
-                        if (playtimeRewardResponseError.getException() != null) {
-                            playtimeRewardResponseError.getException().printStackTrace();
-                            callbackContext.error(playtimeRewardResponseError.getException().getMessage());
+                        if (playtimeRewardResponseError.exception != null) {
+                            playtimeRewardResponseError.exception.printStackTrace();
+                            callbackContext.error(playtimeRewardResponseError.exception.getMessage());
                         } else {
                             callbackContext.error("Playtime SDK could not fetch rewards");
                         }
