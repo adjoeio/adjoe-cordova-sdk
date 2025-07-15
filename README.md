@@ -11,7 +11,7 @@ To integrate the adjoe Cordova SDK into your Cordova project, follow these steps
 
 ```yaml
 dependencies: {
-  "cordova-plugin-adjoe": "https://github.com/adjoeio/adjoe-cordova-sdk#v3.2.0-beta.1"
+  "cordova-plugin-adjoe": "https://github.com/adjoeio/adjoe-cordova-sdk#v3.1.1"
 }
 ```
 3. save the `package.json` and run the following command:
