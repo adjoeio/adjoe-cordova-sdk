@@ -163,10 +163,6 @@ public class PlaytimePlugin extends CordovaPlugin {
 
                     callbackContext.success();
 
-                } catch (PlaytimeNotInitializedException notInitializedException) {
-                    Log.e(LOGTAG, "Playtime SDK not initialized", notInitializedException);
-                    callbackContext.error(notInitializedException.getMessage());
-
                 } catch (PlaytimeException exception) {
                     Log.e(LOGTAG, "Playtime SDK threw an exception", exception);
                     callbackContext.error(exception.getMessage());
